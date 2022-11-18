@@ -26,7 +26,8 @@
 let form = document.querySelector(".form");
 let btn = document.querySelector(".submit-btn");
 
-btn.addEventListener("click", () => {
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
     if (form.input.value.length == 0) {
         alert("Enter plan");
     }
@@ -44,12 +45,14 @@ btn.addEventListener("click", () => {
     // document.querySelector(".tasks").classList.add("tasks");
     form.input.value = "";
 
-    let tasks = document.querySelectorAll(".delete");
-    tasks.forEach(element => {
+    let delBtns = document.querySelectorAll(".delete");
+    delBtns.forEach(element => {
+        element.type = "button";
         element.addEventListener("click", (event) => {
             event.target.parentNode.remove();
         })
     });
 
+    
 })
 
