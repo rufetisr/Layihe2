@@ -49,16 +49,15 @@ h1 {
     margin-bottom: 5px;
 }
 
-.decrease,
-.increase {
+#decrease,
+#increase {
     border: none;
     background: none;
     cursor: pointer;
-
 }
 
-.decrease:hover,
-.increase:hover {
+#decrease:hover,
+#increase:hover {
     background-color: blueviolet;
     border-radius: 10px;
 }

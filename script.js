@@ -44,7 +44,6 @@ form.addEventListener("submit", (event) => {
     }
     // document.querySelector(".tasks").classList.add("tasks");
     form.input.value = "";
-
     let delBtns = document.querySelectorAll(".delete");
     delBtns.forEach(element => {
         element.type = "button";
@@ -52,7 +51,21 @@ form.addEventListener("submit", (event) => {
             event.target.parentNode.remove();
         })
     });
+//     let btnDec = document.getElementById("decrease");
+// let taskList = document.querySelectorAll(".task");
 
-    
-})
+// taskList.forEach(element => {
+//     console.log(element.children[0].textContent);
+// });
 
+
+});
+
+
+
+// btnDec.addEventListener("click", ()=>{
+   
+// })
+
+
+// console.log(taskList);
