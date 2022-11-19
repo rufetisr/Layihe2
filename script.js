@@ -25,7 +25,7 @@
 
 let form = document.querySelector(".form");
 let btn = document.querySelector(".submit-btn");
-
+let i =0;
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (form.input.value.length == 0) {
@@ -41,7 +41,7 @@ form.addEventListener("submit", (event) => {
         X
         </button>
         </div>`;
-    }
+    
     // document.querySelector(".tasks").classList.add("tasks");
     form.input.value = "";
     let delBtns = document.querySelectorAll(".delete");
@@ -51,17 +51,22 @@ form.addEventListener("submit", (event) => {
             event.target.parentNode.remove();
         })
     });
-//     let btnDec = document.getElementById("decrease");
-// let taskList = document.querySelectorAll(".task");
-
-// taskList.forEach(element => {
-//     console.log(element.children[0].textContent);
-// });
-
+    let btnDec = document.getElementById("decrease");
+    let taskList = document.querySelectorAll(".task");
+    // console.log(taskList[i].children[0].textContent);
+    console.log(i);
+    let arr = [];
+    arr.push(taskList[i].children[0].innerHTML);
+    i++;   
+    console.log(arr[0]);
+    
+//     btnDec.addEventListener("click",()=>{
+      }
+// })
 
 });
 
-
+console.log("outside");
 
 // btnDec.addEventListener("click", ()=>{
    
