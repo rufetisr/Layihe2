@@ -26,6 +26,7 @@
 let form = document.querySelector(".form");
 let btn = document.querySelector(".submit-btn");
 let i =0;
+let arr = [];
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (form.input.value.length == 0) {
@@ -53,17 +54,26 @@ form.addEventListener("submit", (event) => {
     });
     let btnDec = document.getElementById("decrease");
     let taskList = document.querySelectorAll(".task");
-    // console.log(taskList[i].children[0].textContent);
+    console.log(taskList[i].children[0].innerText);
     console.log(i);
-    let arr = [];
-    arr.push(taskList[i].children[0].innerHTML);
-    i++;   
-    console.log(arr[0]);
     
+    arr.push(taskList[i].children[0].innerText);
+      
+    console.log(arr);
+    btnDec.addEventListener("click",()=>{
+        arr.sort((a, b)=>{
+            return b.charCodeAt()-a.charCodeAt();
+        });
+        console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            taskList[i].children[0].innerText = arr[i];
+        }
+    })    
+    i++; 
 //     btnDec.addEventListener("click",()=>{
-      }
+     
 // })
-
+ }
 });
 
 console.log("outside");
