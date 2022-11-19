@@ -25,7 +25,7 @@
 
 let form = document.querySelector(".form");
 let btn = document.querySelector(".submit-btn");
-let i =0;
+let j =0;
 let arr = [];
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -50,26 +50,41 @@ form.addEventListener("submit", (event) => {
         element.type = "button";
         element.addEventListener("click", (event) => {
             event.target.parentNode.remove();
+
         })
     });
-    let btnDec = document.getElementById("decrease");
-    let taskList = document.querySelectorAll(".task");
-    console.log(taskList[i].children[0].innerText);
-    console.log(i);
+
+    let btnDec = document.querySelector("#decrease");
     
-    arr.push(taskList[i].children[0].innerText);
+    let btnInc = document.querySelector("#increase");
+    let taskList = document.querySelectorAll(".task");
+    // console.log(taskList[i].children[0].innerText);
+    console.log(j);
+    
+    arr.push(taskList[j].children[0].innerText);
       
     console.log(arr);
     btnDec.addEventListener("click",()=>{
+        // ev.preventDefault();
         arr.sort((a, b)=>{
             return b.charCodeAt()-a.charCodeAt();
         });
-        console.log(arr);
+        // console.log(arr);
         for (let i = 0; i < arr.length; i++) {
-            taskList[i].children[0].innerText = arr[i];
+            taskList[i].children[0].innerHTML = arr[i];
         }
     })    
-    i++; 
+    btnInc.addEventListener("click",()=>{
+        arr.sort((a, b)=>{
+            return a.charCodeAt()-b.charCodeAt();
+        });
+        // console.log(arr);
+        for (let i = 0; i < arr.length; i++) {
+            taskList[i].children[0].innerHTML = arr[i];
+        }
+    })    
+
+    j++; 
 //     btnDec.addEventListener("click",()=>{
      
 // })
@@ -77,6 +92,7 @@ form.addEventListener("submit", (event) => {
 });
 
 console.log("outside");
+
 
 // btnDec.addEventListener("click", ()=>{
    
