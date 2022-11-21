@@ -38,8 +38,6 @@
 h1 {
     text-align: center;
     font-size: 4vw;
-    /* color: ; */
-    /* color: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(223,148,42,1) 100%); */
     background: linear-gradient(to top, #ee1b1b 20%, #e2f01e 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -90,7 +88,6 @@ input {
     border-radius: 71px;
     border: none;
     cursor: pointer;
-    /* color: rgb(250, 10, 50); */
     color: white;
     background-color: blueviolet;
 
@@ -113,7 +110,6 @@ input {
 .tasks{
     padding: 2vh;
     border-radius: 10px;
-    /* background-color: blueviolet; */
     margin-top: 10px;
     width: 100%;
     display: flex;
@@ -124,43 +120,17 @@ input {
 
 .task {
     border-radius: 10px;
-    /* align-items: center; */
     justify-content: space-between;
     border: 1px solid #939697;
     cursor: default;
     background-color: whitesmoke;
-    /* margin-top: 8px; */
     margin-bottom: 8px;
     display: flex;
     padding: 10px;
-    /* box-sizing: border-box; */
 }
 
 .task span {
     font-size: 2vh;
     width: 20vw;
-    /* overflow-wrap: break-word; */
     word-wrap: break-word;
 }
-
-/* 
-table{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    width: 200px;
-    height: 40px;
-    /* background-color: antiquewhite; */
-/* } */
-
-/* tr{
-    display: flex;
-    background-color: antiquewhite;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: space-between;
-    width: 200px;
-    height: 40px;
-    box-sizing: border-box;
-} */
