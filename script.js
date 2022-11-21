@@ -2,6 +2,15 @@
 let form = document.querySelector(".form");
 let btn = document.querySelector(".submit-btn");
 
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        audio.play();
+    });
+});
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (form.input.value.length == 0) {
@@ -25,6 +34,7 @@ form.addEventListener("submit", (event) => {
         delBtns.forEach(element => {
             element.type = "button";
             element.addEventListener("click", (event) => {
+                audio.play();
                 event.target.parentNode.remove();
             })
         });
